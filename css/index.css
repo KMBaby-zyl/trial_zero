@@ -1,0 +1,54 @@
+.homeWrp{
+  overflow: hidden;
+  height: auto;
+}
+.homeWrp ul{
+ height:100%;
+ width: 100%;
+ position:relative;
+}
+.scene{
+  background-size: 100% 100%;
+}
+.homeWrp ul li img{
+  width: 100%;
+}
+
+.km_loding{
+  height: 900px;
+  width: 100%;
+  background: #edb838;
+  z-index: 999px;
+}
+.km_hover{
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 30px;
+  height: 15px;
+  margin-left: -12px;
+  z-index: 111;
+  background: url(http://s0.kuaizhan.com/res/homepage/images/campus/down.png);
+  background-size:100%;
+}
+.km_hover_up{
+   -webkit-animation: km_animate_down 1s;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+   -webkit-transform: translate3d(0, 0, 0);
+}
+.km_hover_down{
+  -webkit-animation: km_animate_up 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes km_animate_down{
+0%{ -webkit-transform: translate3d(0, 0, 0);}
+50%{  -webkit-transform: translate3d(0, -6px, 0);}
+100%{  -webkit-transform: translate3d(0, 0, 0);}
+}
+@-webkit-keyframes km_animate_up{
+0%{ -webkit-transform: translate3d(0, 0, 0) rotateY(180deg) rotateX(180deg);}
+50%{  -webkit-transform: translate3d(0, -6px, 0) rotateY(180deg) rotateX(180deg);}
+100%{  -webkit-transform: translate3d(0, 0, 0) rotateY(180deg) rotateX(180deg);}
+}
