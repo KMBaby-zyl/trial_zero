@@ -10,27 +10,183 @@
     <meta name="Description" content="标题文字默认文本商店默认文本">
     <meta http-equiv="Cache-Control" content="no-transform">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
-
+<script type="text/javascript">
+    var _myanimate = [{
+        'manup': {
+            'animate': 'bounceInDown',
+        },
+        'mandown': {
+            'animate': 'bounceInUp',
+        },
+        'text1': {
+            'animate': 'bounceInRight',
+            'dealy': 1500
+        },
+        'text2': {
+            'animate': 'bounceInLeft',
+            'dealy': 1500
+        }
+    },{
+        'title': {
+            'animate': 'bounceInDown'
+        },
+        'text1': {
+            'animate': 'bounceInLeft',
+            'dealy': 1000
+        },
+        'text2': {
+            'animate': 'bounceInLeft',
+            'dealy': 2000
+        },
+        'text3': {
+            'animate': 'bounceInLeft',
+            'dealy': 3000
+        }
+    },{
+        'title': {
+            'animate': 'bounceIn'
+        },
+        'v1': {
+            'animate': 'bounceInLeft',
+            'dealy': 1000
+        },
+        'vs': {
+            'animate': 'fadeIn',
+            'dealy': 2000
+        },
+        'v2': {
+            'animate': 'bounceInRight',
+            'dealy': 2500
+        }
+    },{
+        'title': {
+            'animate': 'bounceIn'
+        },
+        'v1': {
+            'animate': 'bounceInLeft',
+            'dealy': 1000
+        },
+        'vs': {
+            'animate': 'fadeIn',
+            'dealy': 2000
+        },
+        'v2': {
+            'animate': 'bounceInRight',
+            'dealy': 2500
+        }
+    },{
+        'title': {
+            'animate': 'bounceIn'
+        },
+        'v1': {
+            'animate': 'bounceInLeft',
+            'dealy': 1000
+        },
+        'vs': {
+            'animate': 'fadeIn',
+            'dealy': 2000
+        },
+        'v2': {
+            'animate': 'bounceInRight',
+            'dealy': 2500
+        }
+    },{
+        'title': {
+            'animate': 'bounceIn'
+        },
+        'v1': {
+            'animate': 'bounceInLeft',
+            'dealy': 1000
+        },
+        'vs': {
+            'animate': 'fadeIn',
+            'dealy': 2000
+        },
+        'v2': {
+            'animate': 'bounceInRight',
+            'dealy': 2500
+        }
+    },{
+        'text1': {
+            'animate': 'bounceIn'
+        },
+        'text2': {
+            'animate': 'bounceInLeft',
+            'dealy': 1000
+        },
+        'text3': {
+            'animate': 'bounceInUp',
+            'dealy': 2000
+        }
+    }];
+</script>
 <div class="homeWrp">
     <div class="km_loding"></div>
     <ul class="clearfix mm_animate0">
-        <li class="scene" data-image="01.png";>
+        <li class="scene scene1" data-image="01.png";>
+            <div data-roal="manup"></div>
+            <div data-roal="mandown"></div>
+            <div data-roal="text1"></div>
+            <div data-roal="text2"><div role='content-container'>中国健康的头号杀手竟然是它！</div></div>
             <div class="km_hover km_hover_up"></div>
         </li>
-        <li class="scene" data-image="02.png";>
+        <li class="scene scene2" data-image="02.png";>
+            <div data-roal="title"></div>
+            <div data-roal="text1"></div>
+            <div data-roal="text2"></div>
+            <div data-roal="text3"></div>
+            <div data-roal="bb"></div>
             <div class="km_hover km_hover_up"></div>
         </li>
-        <li class="scene" data-image="03.png";>
+        <li class="scene scene3" data-image="03.png";>
+            <div data-roal="title"></div>
+            <div data-roal="v1"></div>
+            <div data-roal="vs"></div>
+            <div data-roal="v2"></div>
             <div class="km_hover km_hover_up"></div>
         </li>
-        <li class="scene" data-image="04.png";>
+        <li class="scene scene4" data-image="04.png";>
+            <div data-roal="title"></div>
+            <div data-roal="v1"></div>
+            <div data-roal="vs"></div>
+            <div data-roal="v2"></div>
             <div class="km_hover km_hover_up"></div>
         </li>
-        <li class="scene" data-image="05.png";>
+        <li class="scene scene5" data-image="05.png";>
+            <div data-roal="title"></div>
+            <div data-roal="v1"></div>
+            <div data-roal="vs"></div>
+            <div data-roal="v2"></div>
+            <div class="km_hover km_hover_up"></div>
+        </li>
+        <li class="scene scene6" data-image="06.png";>
+            <div data-roal="title"></div>
+            <div data-roal="v1"></div>
+            <div data-roal="vs"></div>
+            <div data-roal="v2"></div>
+            <div class="km_hover km_hover_up"></div>
+        </li>
+        <li class="scene scene7" data-image="07.png";>
+            <div data-roal="text1"></div>
+            <div data-roal="text2"></div>
+            <div data-roal="text3"></div>
+            <div class="km_hover km_hover_up"></div>
+        </li>
+        <li class="scene" data-image="08.png";>
+
+            <div class="km_hover km_hover_up"></div>
+        </li>
+        <li class="scene" data-image="09.png";>
+
+            <div class="km_hover km_hover_up"></div>
+        </li>
+        <li class="scene" data-image="10.png";>
+
             <div class="km_hover km_hover_up"></div>
         </li>
     </ul>

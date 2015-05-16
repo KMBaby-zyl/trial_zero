@@ -1,7 +1,12 @@
 window.onload = function(){
+  var cur,
+      height,
+      myanimate = _myanimate;
+
   var pluginName = "archer",
       defaults = {
       };
+
   function archer(element, options){
     this.element = element;
     this.options = $.extend({},defaults,options);
@@ -11,6 +16,31 @@ window.onload = function(){
 
     this.init();
   }
+
+  function addanimate(cur){
+    for(var i in myanimate[cur]){
+      var t = $('.scene:eq('+cur+')').find('[data-roal="'+i+'"]');
+      var duration = myanimate[cur][i]['duration'] ? myanimate[cur][i]['duration'] : 1000;
+      var dealy = myanimate[cur][i]['dealy'] ? myanimate[cur][i]['dealy'] : 0;
+
+
+      (function(t,i,duration,dealy){
+        t.css('display','none');
+        setTimeout(function(){
+          t.css('display','block');
+          t.addClass(myanimate[cur][i]['animate']);
+          t.css('-webkit-animation-duration',   duration + 'ms');
+
+          setTimeout(function(){
+            t.attr('class','');
+          }, duration);
+
+        }, dealy);
+      })(t,i,duration,dealy);
+
+    }
+  }
+
   function has3d() {
     var el = document.createElement('p'),
         has3d,
@@ -38,6 +68,7 @@ window.onload = function(){
 
       var touchsurface = this.element[0];
       var touchmove, touched, startX, startY, lastTouch, moved,cur,height;
+      var liMax = $('.scene').length -1;
 
       var translate3d = has3d(),
           orientation = 'vertical';
@@ -64,13 +95,18 @@ window.onload = function(){
           $('.homeWrp > ul').addClass(className);
           touchsurface.scrollTo(0,-(cur+1)*height);
           location.hash = cur+1;
+
+          addanimate(cur + 1);
         }else if(swipedir == "down"){
           var className = 'kmN_animate_up'+(cur-1);
           $('.homeWrp > ul')[0].className = 'clearfix';
           $('.homeWrp > ul').addClass(className);
           touchsurface.scrollTo(0,-(cur-1)*height);
           location.hash = cur-1;
+
+          addanimate(cur -1);
         }
+
       }
 
       touchsurface.back = function(){
@@ -125,7 +161,7 @@ window.onload = function(){
             if(cur == 0){ touchsurface.scrollTo(0,0); return;}
             touchsurface.swipe('down');
           }else if (v < -20) {
-            if(cur == 3){ touchsurface.scrollTo(0,-3*height); return;}
+            if(cur == liMax){ touchsurface.scrollTo(0, -(liMax * height));return;}
             touchsurface.swipe('up');
           }else {
             touchsurface.back();
@@ -143,7 +179,7 @@ window.onload = function(){
     return new archer(this,options)
   }
 
-  $('.homeWrp ul li').height($(window).height());
+  $('.homeWrp ul li').css('height',$(window).height());
   $(window).scrollTop(0);
   $('.km_loding').remove();
 
@@ -153,43 +189,35 @@ window.onload = function(){
     $('.homeWrp').css('-webkit-transform', 'translate' + (translate3d ? '3d' : '') + '(' + 0 + ',' + -y + 'px' + (translate3d ? ',0' : '') + ')');
     $('.homeWrp > ul')[0].className = 'clearfix';
     $('.homeWrp > ul').addClass('kmN_animate'+(location.hash.slice(1)));
+
+    addanimate(location.hash.slice(1));
+  }else{
+    addanimate(0);
   }
+
   $(window).resize(function(){
     $(window).scrollTop(0);
     $('.homeWrp ul li').css('height',$(window).height());
   });
-  // 图片延迟加载
-  $('.homeBg2').find('img').each(function(){
-    $(this).attr('src',$(this).attr('delay'));
-  })
-  $('.homeBg3').find('img').each(function(){
-    $(this).attr('src',$(this).attr('delay'));
-  })
-  $('.homeBg4').find('img').each(function(){
-    $(this).attr('src',$(this).attr('delay'));
-  })
-  // $('.homeWrp').swipeDown(function(e){
-  // });
 
   // swipedetect($('.homeWrp'));
   $('.homeWrp').archer();
 
   $('.km_hover_up').each(function(){
     $(this)[0].addEventListener('touchstart',function(){
-      $('.homeWrp')[0].swipe('down');
+      $('.homeWrp')[0].swipe('up');
     },false);
   });
 
   $('.km_hover_down').each(function(){
     $(this)[0].addEventListener('touchstart',function(){
-      $('.homeWrp')[0].swipe('up');
+      $('.homeWrp')[0].swipe('down');
     },false);
   });
 
   $('.scene').each(function(){
     var imgurl = 'url(images/'  + $(this).data('image') + ')';
     $(this).css('background-image',imgurl);
-    console.log($(this)[0]);
   });
 
 

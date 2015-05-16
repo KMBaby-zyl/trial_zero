@@ -9,6 +9,7 @@
 }
 .scene{
   background-size: 100% 100%;
+  position: relative;
 }
 .homeWrp ul li img{
   width: 100%;
@@ -24,12 +25,12 @@
   position: absolute;
   bottom: 12px;
   left: 50%;
-  width: 30px;
-  height: 15px;
+  width: 24px;
+  height: 14px;
   margin-left: -12px;
   z-index: 111;
-  background: url(http://s0.kuaizhan.com/res/homepage/images/campus/down.png);
-  background-size:100%;
+  background: url(../images/btn01_arrow.png);
+  background-size:100% 100%;
 }
 .km_hover_up{
    -webkit-animation: km_animate_down 1s;
@@ -51,4 +52,298 @@
 0%{ -webkit-transform: translate3d(0, 0, 0) rotateY(180deg) rotateX(180deg);}
 50%{  -webkit-transform: translate3d(0, -6px, 0) rotateY(180deg) rotateX(180deg);}
 100%{  -webkit-transform: translate3d(0, 0, 0) rotateY(180deg) rotateX(180deg);}
+}
+
+/*common动画*/
+.animate1m{
+  -webkit-animation-duration: 1000ms;
+}
+
+
+/*scene1*/
+.scene1  [data-roal=manup] {
+  background: url(../images/01/01_man_up.png);
+  background-size: 100% 100%;
+  width: 169px;
+  height: 227px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -84px;
+  margin-top: -237px;
+}
+.scene1 [data-roal=mandown]{
+  background: url(../images/01/01_man_down.png);
+  background-size: 100% 100%;
+  width: 169px;
+  height: 227px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -84px;
+  margin-top: 10px;
+}
+.scene1 [data-roal=text1]{
+  background: url(../images/01/01_text.png);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 180px;
+  top: 50%;
+  position: absolute;
+  margin-top: -90px;
+}
+.scene1 [data-roal=text2]{
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  font-weight: bolder;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -90px;
+}
+.scene1 [data-roal=text2] [role=content-container]{
+  color: #4e4949;
+  font-size: 20px;
+  transform: rotate(-13deg);
+}
+
+.scene2 [data-roal=title]{
+  background: url(../images/02/02_title.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 209px;
+  height: 71px;
+  left: 10%;
+  top: 50px;
+}
+.scene2 [data-roal=text1]{
+  background: url(../images/02/02_text1.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 195px;
+  top: 70px;
+}
+.scene2 [data-roal=text2]{
+  background: url(../images/02/02_text2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 195px;
+  top: 200px;
+}
+.scene2 [data-roal=text3]{
+  background: url(../images/02/02_text3.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 195px;
+  top: 330px;
+}
+
+.scene2 [data-roal=bb]{
+  background: url(../images/02/02_bb.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.scene3 [data-roal=title]{
+  background: url(../images/03/03_title.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 296px;
+  height: 72px;
+    margin-left: -148px;
+  left: 50%;
+  top: 5%;
+}
+.scene3 [data-roal=v1]{
+  background: url(../images/03/03_v1.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 250px;
+  height: 145px;
+    top: 20%;
+  left: 50%;
+  margin-left: -125px;
+}
+.scene3 [data-roal=v2]{
+  background: url(../images/03/03_v2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 270px;
+  height: 155px;
+    bottom: 10%;
+  left: 50%;
+  margin-left: -135px;
+}
+.scene3 [data-roal=vs]{
+  background: url(../images/vs.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 58px;
+  height: 43px;
+  top: 50%;
+  left: 50%;
+  margin-left: -29px;
+}
+
+
+.scene4 [data-roal=title]{
+  background: url(../images/04/04_title.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 229px;
+  height: 84px;
+  margin-left: -114px;
+  left: 50%;
+  top: 5%;
+}
+.scene4 [data-roal=v1]{
+  background: url(../images/04/04_v1.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 229px;
+  height: 123px;
+  top: 20%;
+  left: 50%;
+  margin-left: -114px;
+}
+.scene4 [data-roal=v2]{
+  background: url(../images/04/04_v2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 229px;
+  height: 170px;
+    bottom: 10%;
+  left: 50%;
+  margin-left: -114px;
+}
+.scene4 [data-roal=vs]{
+  background: url(../images/vs.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 58px;
+  height: 43px;
+  top: 50%;
+  left: 50%;
+  margin-left: -29px;
+}
+
+
+.scene5 [data-roal=title]{
+  background: url(../images/05/05_title.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 277px;
+  height: 60px;
+  margin-left: -138px;
+  left: 50%;
+  top: 5%;
+}
+.scene5 [data-roal=v1]{
+  background: url(../images/05/05_v1.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 277px;
+  height: 97px;
+  top: 20%;
+  left: 50%;
+  margin-left: -138px;
+}
+.scene5 [data-roal=v2]{
+  background: url(../images/05/05_v2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 277px;
+  height: 95px;
+    bottom: 23%;
+  left: 50%;
+  margin-left: -138px;
+}
+.scene5 [data-roal=vs]{
+  background: url(../images/vs.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 58px;
+  height: 43px;
+  top: 50%;
+  left: 50%;
+  margin-left: -29px;
+}
+
+
+.scene6 [data-roal=title]{
+  background: url(../images/06/06_title.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 266px;
+  height: 67px;
+  margin-left: -133px;
+  left: 50%;
+  top: 5%;
+}
+.scene6 [data-roal=v1]{
+  background: url(../images/06/06_v1.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 266px;
+  height: 93px;
+  top: 22%;
+  left: 50%;
+  margin-left: -133px;
+}
+.scene6 [data-roal=v2]{
+  background: url(../images/06/06_v2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 266px;
+  height: 119px;
+    bottom: 17%;
+  left: 50%;
+  margin-left: -133px;
+}
+.scene6 [data-roal=vs]{
+  background: url(../images/vs.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 58px;
+  height: 43px;
+  top: 50%;
+  left: 50%;
+  margin-left: -29px;
+}
+
+.scene7 [data-roal=text1]{
+  background: url(../images/07/07_text1.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 228px;
+  height: 113px;
+    top: 10%;
+  left: 50%;
+  margin-left: -114px;
+}
+.scene7 [data-roal=text2]{
+  background: url(../images/07/07_text2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 140px;
+  height: 95px;
+    bottom: 40%;
+  left: 6%;
+}
+.scene7 [data-roal=text3]{
+  background: url(../images/07/07_text3.png);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 237px;
+  height: 58px;
+    bottom: 6%;
+  left: 50%;
+  margin-left: -118px;
 }
