@@ -86,20 +86,20 @@ window.onload = function(){
       };
 
       touchsurface.swipe = function (swipedir){
-         cur = parseInt($('.homeWrp >ul')[0].className.slice(-1));
+         cur = parseInt($('.homeWrp >ul')[0].className.slice(11));
          height = $(window).height();
 
         if(swipedir == "up"){
           var className = 'kmN_animate'+(cur+1);
-          $('.homeWrp > ul')[0].className = 'clearfix';
+          $('.homeWrp > ul')[0].className = '';
           $('.homeWrp > ul').addClass(className);
           touchsurface.scrollTo(0,-(cur+1)*height);
           location.hash = cur+1;
 
           addanimate(cur + 1);
         }else if(swipedir == "down"){
-          var className = 'kmN_animate_up'+(cur-1);
-          $('.homeWrp > ul')[0].className = 'clearfix';
+          var className = 'kmN_animate'+(cur-1);
+          $('.homeWrp > ul')[0].className = '';
           $('.homeWrp > ul').addClass(className);
           touchsurface.scrollTo(0,-(cur-1)*height);
           location.hash = cur-1;
@@ -110,12 +110,12 @@ window.onload = function(){
       }
 
       touchsurface.back = function(){
-        cur = parseInt($('.homeWrp >ul')[0].className.slice(-1));
+        cur = parseInt($('.homeWrp >ul')[0].className.slice(11));
         height = $(window).height();
         touchsurface.scrollTo(0, -height * cur);
       }
       touchsurface.addEventListener('touchstart', function(e){
-        cur = parseInt($('.homeWrp >ul')[0].className.slice(-1));
+        cur = parseInt($('.homeWrp >ul')[0].className.slice(11));
         height = $(window).height();
         var t;
         if (t = e.touches) { t = t[0]; } else { t = e; }
@@ -187,7 +187,7 @@ window.onload = function(){
     var translate3d = has3d();
     var y = location.hash.slice(1) * $(window).height();
     $('.homeWrp').css('-webkit-transform', 'translate' + (translate3d ? '3d' : '') + '(' + 0 + ',' + -y + 'px' + (translate3d ? ',0' : '') + ')');
-    $('.homeWrp > ul')[0].className = 'clearfix';
+    $('.homeWrp > ul')[0].className = '';
     $('.homeWrp > ul').addClass('kmN_animate'+(location.hash.slice(1)));
 
     addanimate(location.hash.slice(1));
