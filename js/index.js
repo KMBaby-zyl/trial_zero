@@ -1,3 +1,15 @@
+function preloadimages(arr){
+    var newimages=[]
+    var arr=(typeof arr!="object")? [arr] : arr  //确保参数总是数组
+    for (var i=0; i<arr.length; i++){
+        newimages[i]=new Image()
+        newimages[i].src=arr[i]
+    }
+}
+
+preloadimages(['images/01.png','images/02.png','images/03.png','images/04.png']);
+
+
 window.onload = function(){
   var cur,
       height,
@@ -178,6 +190,9 @@ window.onload = function(){
   $.fn.archer = function(options){
     return new archer(this,options)
   }
+// ——————————————————————————————————————————————————————————————————————————
+// index.js
+
 
   $('.homeWrp ul li').css('height',$(window).height());
   $(window).scrollTop(0);

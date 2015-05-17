@@ -19,7 +19,15 @@
   height: 900px;
   width: 100%;
   background: #edb838;
-  z-index: 999px;
+  z-index: 999;
+  position: relative;
+  overflow: hidden;
+}
+.km_loding .loading{
+  background: url(../images/loading.gif);
+  height: 100px;
+  width: 100px;
+  margin: 200px auto;
 }
 .km_hover{
   position: absolute;
